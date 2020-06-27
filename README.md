@@ -27,6 +27,8 @@ Explanation: The input binary string 11111111111111111111111111111101 represents
 If this function is called many times, how would you optimize it?
 
 ## Approach :
+![Reverse Bits](reverse-bits.png?raw=true "Reverse Bits")
+
 Quick recap about `AND` operator
 ```
 1 & 1 = 1
@@ -68,6 +70,6 @@ public class Solution {
 
 # References :
 1. https://www.youtube.com/watch?v=KE5Axm7uzok
-2, https://developersinspired.com/2020/03/02/how-to-reverse-bits-bit-manipulation
+2. https://developersinspired.com/2020/03/02/how-to-reverse-bits-bit-manipulation
 
 
