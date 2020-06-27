@@ -7,13 +7,15 @@ Example 1:
 
 Input: 00000010100101000001111010011100
 Output: 00111001011110000010100101000000
-Explanation: The input binary string 00000010100101000001111010011100 represents the unsigned integer 43261596, so return 964176192 which its binary representation is 00111001011110000010100101000000.
+Explanation: The input binary string 00000010100101000001111010011100 represents the unsigned integer 43261596, 
+so return 964176192 which its binary representation is 00111001011110000010100101000000.
 
 Example 2:
 
 Input: 11111111111111111111111111111101
 Output: 10111111111111111111111111111111
-Explanation: The input binary string 11111111111111111111111111111101 represents the unsigned integer 4294967293, so return 3221225471 which its binary representation is 10111111111111111111111111111111.
+Explanation: The input binary string 11111111111111111111111111111101 represents the unsigned integer 4294967293, 
+so return 3221225471 which its binary representation is 10111111111111111111111111111111.
 ``` 
 
 **Note:**
@@ -27,6 +29,8 @@ Explanation: The input binary string 11111111111111111111111111111101 represents
 If this function is called many times, how would you optimize it?
 
 ## Approach :
+Idea is to retrieve the last bit from the unsigned number one by one and add it to the result.
+
 ![Reverse Bits](reverse-bits.png?raw=true "Reverse Bits")
 
 Quick recap about `AND` operator
@@ -45,7 +49,7 @@ So we will do `OR` operation (| bit) to insert the bit into result.
 
 Iterate over the 32 bit unsigned number and do the following operations :
 
-1. First do the `& 1` operation with input n, this will give us the bit
+1. First do the `& 1` operation with input n, this will give us the last bit
 2. Right shift the input n by 1 (n >> 1), for the next iteration
 3. Next Left shift the result by 1 (result << 1) to make the space, so now the last bit of result will be 0
 4. Do the `OR` operation with the bit in Step 1 (result | bit)
